@@ -1,0 +1,602 @@
+---
+layout: base.njk
+pageTitle: Purdoc
+extraStyles: |
+  /* HERO */
+  .hero {
+    padding-top: 68px;
+    background: #2a2a2a;
+    color: #fff;
+    position: relative;
+    padding-bottom: 170px;
+  }
+  .hero-text {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 24px 0;
+    position: relative;
+    z-index: 3;
+  }
+  .hero h1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 32px;
+  }
+  .hero-btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #fff 0%, #e8e8e8 100%);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.9);
+    color: #181818;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Manrope', sans-serif;
+    transition: box-shadow 0.2s, transform 0.15s;
+    cursor: pointer;
+  }
+  .hero-btn:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.9);
+    transform: translateY(-1px);
+  }
+  .hero-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+  .hero-image-wrap {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 24px;
+    margin-top: -230px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-image-wrap img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .hero-image-wrap:hover img {
+    transform: scale(1.015) translateY(-3px);
+  }
+  section {
+    padding: 70px 0;
+    margin-top: -100px;
+  }
+  .section-row {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #999;
+    line-height: 1.65;
+  }
+  .section-row .section-label {
+    margin-top: 7px;
+  }
+  .section-label img {
+    width: 11px;
+    height: 11px;
+    transition: transform 0.3s ease;
+  }
+  .section-label:hover img {
+    animation: signet-spin 4s linear infinite;
+  }
+  .section-content {
+    max-width: none;
+  }
+  .section-content p {
+    margin-bottom: 22px;
+    color: #333;
+    font-size: inherit;
+  }
+  .section-content p:last-child {
+    margin-bottom: 0;
+  }
+  .highlight {
+    padding: 80px 0 60px;
+  }
+  .highlight-inner {
+    padding-left: 320px;
+  }
+  .highlight h2 {
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    margin-bottom: 32px;
+    line-height: 1.2;
+    color: #1a1a1a;
+  }
+  .highlight p {
+    margin-bottom: 22px;
+    color: #333;
+    font-size: inherit;
+  }
+  .highlight .bold-lines {
+    margin-top: 28px;
+  }
+  .highlight .bold-lines p {
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+    font-size: inherit;
+  }
+  .faq {
+    padding: 80px 0 60px;
+  }
+  .faq-header {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 48px;
+  }
+  .faq-list {
+    max-width: 900px;
+    margin-left: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .faq-item {
+    background: #f6f6f6;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+  }
+  .faq-item:has(.faq-toggle:checked) {
+    background: #f0f0f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .faq-question {
+    width: 100%;
+    display: block;
+    background: none;
+    border: none;
+    padding: 28px 56px 28px 28px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    line-height: 1.4;
+    transition: color 0.2s;
+  }
+  .faq-question:hover {
+    color: #555;
+  }
+  .faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    font-weight: 500;
+    color: #999;
+    transition: transform 0.25s ease;
+  }
+  .faq-toggle {
+    display: none;
+  }
+  .faq-toggle:checked + .faq-question::after {
+    content: '';
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .faq-toggle:checked ~ .faq-answer {
+    max-height: 400px;
+  }
+  .faq-answer-inner {
+    padding: 0 28px 28px 28px;
+  }
+  .faq-answer p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.65;
+  }
+  .process {
+    padding: 80px 0 60px;
+  }
+  .process-header {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 80px;
+    align-items: start;
+    margin-bottom: 48px;
+  }
+  .process-list {
+    max-width: 900px;
+    margin-left: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .process-step {
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 20px;
+    padding: 32px 0;
+    border-bottom: 1px solid #e0e0e0;
+    align-items: start;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .process-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .process-step:first-child {
+    border-top: 1px solid #e0e0e0;
+  }
+  .step-number {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #2a2a2a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .step-content h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .step-content p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 10px;
+  }
+  .step-content p:last-child {
+    margin-bottom: 0;
+  }
+  .cta {
+    background: #2a2a2a;
+    color: #fff;
+    padding: 80px 0 0;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .cta-left {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 80px;
+  }
+  .cta-left h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    color: #fff;
+  }
+  .cta-left .hero-btn {
+    font-size: 15px;
+    padding: 12px 32px;
+  }
+  .cta-signet {
+    display: block;
+    width: 480px;
+    height: 480px;
+    opacity: 1;
+    animation: signet-spin 30s linear infinite;
+    margin-top: -40px;
+    margin-left: -60px;
+    margin-bottom: -240px;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-right {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.5);
+    padding-top: 4px;
+  }
+  .cta-right strong {
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .cta-right .cta-subtitle {
+    color: rgba(255,255,255,0.35);
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .cta-right a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .cta-right a:hover {
+    color: #fff;
+  }
+  @media (max-width: 768px) {
+    .hero-text {
+      padding: 40px 16px 0;
+    }
+    .hero {
+      padding-bottom: 140px;
+    }
+    .hero h1 {
+      font-size: 24px;
+    }
+    .hero-image-wrap {
+      padding: 0 16px;
+      margin-top: -100px;
+    }
+    section {
+      padding: 44px 0;
+    }
+    .section-row {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .highlight {
+      padding: 50px 0 40px;
+    }
+    .highlight-inner {
+      padding-left: 0;
+    }
+    .highlight h2 {
+      font-size: 28px;
+    }
+    .faq-header,
+    .process-header {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .faq-list,
+    .process-list {
+      margin-left: 0;
+    }
+    .faq-question {
+      font-size: 17px;
+      padding: 22px 44px 22px 20px;
+    }
+    .faq-question::after {
+      right: 20px;
+    }
+    .faq-answer-inner {
+      padding: 0 20px 22px 20px;
+    }
+    .faq-answer p {
+      font-size: 16px;
+    }
+    .step-content h3 {
+      font-size: 19px;
+    }
+    .step-content p,
+    .step-content ul li {
+      font-size: 16px;
+    }
+    .step-number {
+      width: 22px;
+      height: 22px;
+      font-size: 11px;
+    }
+    .process-step {
+      grid-template-columns: 22px 1fr;
+      gap: 14px;
+      padding: 24px 0;
+    }
+    .cta-inner {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .cta-left {
+      padding-bottom: 0;
+    }
+    .cta-left h2 {
+      font-size: 20px;
+    }
+    .cta-signet {
+      width: 280px;
+      height: 280px;
+      margin-left: -40px;
+      margin-bottom: -140px;
+    }
+  }
+extraScripts: |
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var steps = document.querySelectorAll('.process-step');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var index = Array.prototype.indexOf.call(steps, entry.target);
+            setTimeout(function() {
+              entry.target.classList.add('visible');
+            }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      steps.forEach(function(step) { observer.observe(step); });
+    });
+  </script>
+---
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>{{ hero.headline | safe }}</h1>
+    <a href="{{ hero.buttonLink }}" class="hero-btn">{{ hero.buttonText }}</a>
+  </div>
+</div>
+
+<!-- HERO IMAGE -->
+<div class="hero-image-wrap">
+  <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}">
+</div>
+
+<!-- DAS PROBLEM -->
+<section id="information">
+  <div class="container">
+    <div class="section-row">
+      <div class="section-label">
+        <img src="{{ sections.problem.icon }}" alt="">
+        {{ sections.problem.label }}
+      </div>
+      <div class="section-content">
+        {% for p in sections.problem.paragraphs %}
+          <p>{{ p | safe }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIE LÖSUNG -->
+<section>
+  <div class="container">
+    <div class="section-row">
+      <div class="section-label">
+        <img src="{{ sections.loesung.icon }}" alt="">
+        {{ sections.loesung.label }}
+      </div>
+      <div class="section-content">
+        {% for p in sections.loesung.paragraphs %}
+          <p>{{ p | safe }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEIN WORD -->
+<section>
+  <div class="container">
+    <div class="highlight">
+      <div class="highlight-inner">
+        <h2>{{ sections.highlight.headline | safe }}</h2>
+        {% for p in sections.highlight.paragraphs %}
+          <p>{{ p | safe }}</p>
+        {% endfor %}
+        <div class="bold-lines">
+          {% for line in sections.highlight.boldLines %}
+            <p>{{ line | safe }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIE ZUSAMMENARBEIT -->
+<section id="ueber-uns">
+  <div class="container">
+    <div class="section-row">
+      <div class="section-label">
+        <img src="{{ zusammenarbeit.icon }}" alt="">
+        {{ zusammenarbeit.label }}
+      </div>
+      <div class="section-content">
+        {% for p in zusammenarbeit.paragraphs %}
+          <p>{{ p | safe }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SO LÄUFT EIN PROJEKT AB -->
+<section class="process" id="ablauf">
+  <div class="container">
+    <div class="process-header">
+      <div class="section-label">
+        <img src="{{ process.icon }}" alt="">
+        {{ process.label }}
+      </div>
+    </div>
+    <div class="process-list">
+      {% for step in process.steps %}
+        <div class="process-step">
+          <div class="step-number">{{ loop.index }}</div>
+          <div class="step-content">
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description | safe }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label">
+        <img src="/static/purdoc_icon_1.svg" alt="">
+        Häufige Fragen
+      </div>
+    </div>
+    <div class="faq-list">
+      {% for item in faq.items %}
+        <div class="faq-item">
+          <input type="checkbox" class="faq-toggle" id="faq-{{ loop.index }}">
+          <label class="faq-question" for="faq-{{ loop.index }}">{{ item.question }}</label>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>{{ item.answer | safe }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="kontakt">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-left">
+        <h2>{{ cta.headline | safe }}</h2>
+        <a href="mailto:{{ cta.email }}" class="hero-btn">{{ cta.buttonText }}</a>
+      </div>
+      <div class="cta-right">
+        <strong>{{ cta.companyName }}</strong>
+        <span class="cta-subtitle">{{ cta.subtitle }}</span>
+        {{ cta.address | safe }}<br><br>
+        <a href="mailto:{{ cta.email }}">{{ cta.email }}</a>
+      </div>
+    </div>
+  </div>
+  <img src="/static/Signet.svg" alt="" class="cta-signet">
+</section>

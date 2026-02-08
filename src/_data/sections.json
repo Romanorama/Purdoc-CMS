@@ -1,0 +1,31 @@
+{
+  "problem": {
+    "label": "Das Problem",
+    "icon": "/static/purdoc_icon_1.svg",
+    "paragraphs": [
+      "Viele Unternehmen brauchen regelmäßig Angebote, Exposés, Berichte oder interne Dokumente – haben aber weder eine Marketingabteilung noch Inhouse-Grafiker.",
+      "Gleichzeitig kosten Word, PowerPoint oder Canva unnötig Zeit: Inhalte verrutschen, Formate brechen, jede Datei fühlt sich wieder neu und instabil an."
+    ]
+  },
+  "loesung": {
+    "label": "Die Lösung",
+    "icon": "/static/purdoc_icon_2.svg",
+    "paragraphs": [
+      "<span style=\"font-weight:800\">Wir entwickeln unternehmensspezifische PDF Generatoren</span>, mit denen Sie wiederkehrende Dokumente zuverlässig, sauber und einheitlich nach ihrer Corporate Identity erstellen können.",
+      "Einmal definiert, funktionieren Ihre Unterlagen jedes Mal gleich – unabhängig davon, wer sie erstellt.",
+      "<span style=\"font-weight:800\">Die Inhalte kommen aus einfachen Quellen wie Excel-Tabellen(CSV) oder werden einfach und praktisch in vorgegebene Felder eingetippt oder hineinkopiert.</span><br><br>Die Gestaltung bleibt stabil.<br>Das Ergebnis ist ein professionelles Dokument, sofort versandfähig."
+    ]
+  },
+  "highlight": {
+    "headline": "Kein Word, kein PowerPoint, kein Canva",
+    "paragraphs": [
+      "Word und PowerPoint sind Textverarbeitungs- und Präsentationstools, keine Produktionssysteme. Sie zwingen zur manuellen Formatierung, sind fehleranfällig und brechen bei wiederkehrenden Abläufen schnell auseinander.",
+      "Unser Ansatz trennt klar:<br>Inhalt hier. Gestaltung dort. Ausgabe stabil."
+    ],
+    "boldLines": [
+      "Keine verrutschten Elemente.",
+      "Keine Zeitverschwendung mit Layout.",
+      "Keine Abhängigkeit von einzelnen Mitarbeitenden."
+    ]
+  }
+}

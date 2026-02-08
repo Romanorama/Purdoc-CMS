@@ -1,0 +1,12 @@
+{
+  "title": "Purdoc",
+  "email": "mail@studioromanroth.de",
+  "address": "Wrangelstraße 66A\n10997 Berlin",
+  "copyright": "2025 Purdoc",
+  "navLinks": [
+    { "text": "Information", "url": "/beta/" },
+    { "text": "Preise", "url": "/beta/" },
+    { "text": "Über Uns", "url": "/beta/" },
+    { "text": "Kontakt", "url": "/beta/" }
+  ]
+}

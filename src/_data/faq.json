@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "question": "Was ist ein Dokument-Generator?",
+      "answer": "Ein System, das Dokumente nach festen Regeln erzeugt. Sie liefern die Inhalte – per CSV, Formular oder Eingabemaske. Layout und Formatierung sind fix hinterlegt. Das Ergebnis ist jedes Mal ein fertiges, einheitliches Dokument."
+    },
+    {
+      "question": "Brauchen wir technisches Wissen?",
+      "answer": "Nein. Die Bedienung ist so einfach wie das Ausfüllen einer Tabelle. Inhalte werden dort eingegeben, wo Sie heute schon arbeiten. Um Layout müssen Sie sich nicht mehr kümmern."
+    },
+    {
+      "question": "Funktioniert das mit Excel?",
+      "answer": "Ja. Excel und CSV sind die häufigsten Datenquellen. Der Generator liest die Daten ein und setzt sie direkt ins fertige Dokument um."
+    },
+    {
+      "question": "Welches Format haben die Dokumente?",
+      "answer": "In der Regel PDF – druckfertig und sofort versandfähig. Andere Formate sind je nach Projekt ebenfalls möglich."
+    },
+    {
+      "question": "Läuft das System auch offline?",
+      "answer": "Ja. Der Generator kann lokal und ohne Internetverbindung betrieben werden. Ihre Daten verlassen das Unternehmen nicht."
+    },
+    {
+      "question": "Was, wenn Mitarbeitende wechseln?",
+      "answer": "Kein Problem. Das System funktioniert unabhängig von Personen. Neue Teammitglieder können sofort damit arbeiten – Wissen über Layout oder Formatierung ist nicht nötig."
+    },
+    {
+      "question": "Kann unser bestehendes Design übernommen werden?",
+      "answer": "Ja. Ihre bestehende Gestaltung wird 1:1 übernommen und technisch stabilisiert. Auf Wunsch kann sie auch gezielt weiterentwickelt werden."
+    },
+    {
+      "question": "Ist das ein Baukasten?",
+      "answer": "Nein. Der Generator wird individuell für Ihr Unternehmen entwickelt – exakt für Ihre Dokumente, Ihre Daten, Ihre Abläufe."
+    },
+    {
+      "question": "Wie lange dauert ein Projekt?",
+      "answer": "In der Regel ca. 20 Werktage – abhängig vom Umfang und gewählten Paket."
+    },
+    {
+      "question": "Gehört uns der Generator danach?",
+      "answer": "Ja. Der Generator gehört Ihnen. Sie können ihn unbegrenzt nutzen, erweitern oder später anpassen lassen."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "label": "So läuft ein Projekt ab",
+  "icon": "/static/purdoc_icon_3.svg",
+  "steps": [
+    {
+      "title": "Bestandsaufnahme",
+      "description": "Wir sichten gemeinsam Ihre bestehenden Dokumente. Was gibt es, was wiederholt sich, und wo entstehen heute Fehler oder Zeitverluste?"
+    },
+    {
+      "title": "Struktur & Logik",
+      "description": "Wir definieren eine klare Dokumentstruktur: feste Felder, wiederkehrende Bausteine, eindeutige Regeln. Und legen fest, woher die Daten kommen – CSV, interne Listen oder direkte Eingabe."
+    },
+    {
+      "title": "Gestaltung",
+      "description": "Wir übernehmen Ihr bestehendes Design oder überarbeiten es gezielt – Typografie, Abstände, Hierarchien. Das Ergebnis ist eine stabile Gestaltung, die bei jedem Dokument gleich funktioniert."
+    },
+    {
+      "title": "Entwicklung",
+      "description": "Wir bauen den Generator: strukturierte Eingabe, feste Gestaltung, saubere Ausgabe. Kein allgemeines Tool, sondern exakt auf Ihre Dokumente zugeschnitten."
+    },
+    {
+      "title": "Test & Feinschliff",
+      "description": "Wir testen mit echten Daten und realen Szenarien. Stimmen Umbrüche, Inhalte, Abläufe? Was noch nicht passt, wird direkt korrigiert."
+    },
+    {
+      "title": "Übergabe",
+      "description": "Sie erhalten ein fertiges System und können ab sofort Dokumente eigenständig erzeugen – ohne Layoutarbeit, ohne Rückfragen, ohne Abhängigkeiten."
+    },
+    {
+      "title": "Weiterentwicklung",
+      "description": "Optional. Ihr Generator kann später jederzeit erweitert werden – neue Dokumenttypen, zusätzliche Module oder weitere Ausgabeformate."
+    }
+  ]
+}

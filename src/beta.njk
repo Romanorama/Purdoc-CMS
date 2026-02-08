@@ -1,0 +1,86 @@
+---
+layout: base.njk
+pageTitle: Purdoc – Beta
+permalink: /beta/
+customNav: '<li><a href="/">Zurück</a></li>'
+extraStyles: |
+  html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .beta-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 68px;
+  }
+  .beta-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+  }
+  .beta-signet {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    animation: signet-spin 12s linear infinite;
+  }
+  .beta-text h2 {
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+  }
+  .beta-text p {
+    margin-bottom: 22px;
+    color: #333;
+  }
+  .beta-text p:last-child {
+    margin-bottom: 0;
+  }
+  .beta-text a {
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    transition: border-color 0.2s;
+  }
+  .beta-text a:hover {
+    border-color: #1a1a1a;
+  }
+  @media (max-width: 768px) {
+    .beta-content {
+      padding: 40px 16px;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .beta-signet {
+      width: 50px;
+      height: 50px;
+    }
+    .beta-text h2 {
+      font-size: 28px;
+    }
+  }
+---
+
+<!-- BETA CONTENT -->
+<div class="beta-main">
+  <div class="beta-content">
+    <img src="/static/Signet.svg" alt="" class="beta-signet">
+    <div class="beta-text">
+      <h2>{{ beta.headline }}</h2>
+      {% for p in beta.paragraphs %}
+        <p>{{ p | safe }}</p>
+      {% endfor %}
+      <p>{{ beta.contactText }}<br><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </div>
+  </div>
+</div>

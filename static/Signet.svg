@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 372.8 382.18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f15a24;
+      }
+
+      .cls-2 {
+        fill: #fcee21;
+      }
+
+      .cls-3 {
+        fill: #8cc63f;
+      }
+
+      .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-5 {
+        fill: #0071bc;
+      }
+
+      .cls-6 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-7 {
+        fill: #29abe2;
+      }
+
+      .cls-8 {
+        fill: url(#Unbenannter_Verlauf_154);
+      }
+
+      .cls-9 {
+        fill: url(#Unbenannter_Verlauf_122);
+      }
+
+      .cls-10 {
+        fill: url(#Unbenannter_Verlauf_119);
+      }
+
+      .cls-11 {
+        fill: url(#Unbenannter_Verlauf_69);
+      }
+
+      .cls-12 {
+        fill: url(#Unbenannter_Verlauf_24);
+      }
+
+      .cls-13 {
+        fill: url(#Unbenannter_Verlauf_47);
+      }
+
+      .cls-14 {
+        fill: #fbb03b;
+      }
+    </style>
+    <linearGradient id="Unbenannter_Verlauf_119" data-name="Unbenannter Verlauf 119" x1="186.4" y1="197.63" x2="313.61" y2="197.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".3"/>
+      <stop offset=".03" stop-color="#f7fbf2" stop-opacity=".35"/>
+      <stop offset=".15" stop-color="#d6eabb" stop-opacity=".55"/>
+      <stop offset=".28" stop-color="#bbdd8e" stop-opacity=".71"/>
+      <stop offset=".42" stop-color="#a6d36a" stop-opacity=".84"/>
+      <stop offset=".58" stop-color="#97cb52" stop-opacity=".93"/>
+      <stop offset=".75" stop-color="#8ec743" stop-opacity=".98"/>
+      <stop offset="1" stop-color="#8cc63f"/>
+    </linearGradient>
+    <linearGradient id="Unbenannter_Verlauf_154" data-name="Unbenannter Verlauf 154" x1="167.82" y1="106.92" x2="279.9" y2="171.63" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fcee21"/>
+      <stop offset=".11" stop-color="#fcee2a" stop-opacity=".97"/>
+      <stop offset=".28" stop-color="#fcf044" stop-opacity=".89"/>
+      <stop offset=".48" stop-color="#fdf36e" stop-opacity=".75"/>
+      <stop offset=".72" stop-color="#fdf8a9" stop-opacity=".57"/>
+      <stop offset=".97" stop-color="#fefef4" stop-opacity=".33"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="Unbenannter_Verlauf_24" data-name="Unbenannter Verlauf 24" x1="85.64" y1="133.73" x2="227.53" y2="133.73" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbb03b"/>
+      <stop offset=".28" stop-color="#fbb13d" stop-opacity=".99"/>
+      <stop offset=".43" stop-color="#fbb446" stop-opacity=".96"/>
+      <stop offset=".56" stop-color="#fbba56" stop-opacity=".9"/>
+      <stop offset=".66" stop-color="#fbc36b" stop-opacity=".83"/>
+      <stop offset=".76" stop-color="#fccf88" stop-opacity=".72"/>
+      <stop offset=".85" stop-color="#fdddab" stop-opacity=".6"/>
+      <stop offset=".93" stop-color="#feedd3" stop-opacity=".46"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="Unbenannter_Verlauf_47" data-name="Unbenannter Verlauf 47" x1="86.34" y1="249.67" x2="157.29" y2="126.79" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f15a24"/>
+      <stop offset=".21" stop-color="#f15c27" stop-opacity=".99"/>
+      <stop offset=".37" stop-color="#f26634" stop-opacity=".95"/>
+      <stop offset=".51" stop-color="#f37649" stop-opacity=".88"/>
+      <stop offset=".64" stop-color="#f58c67" stop-opacity=".78"/>
+      <stop offset=".76" stop-color="#f7aa8e" stop-opacity=".66"/>
+      <stop offset=".87" stop-color="#facdbd" stop-opacity=".51"/>
+      <stop offset=".98" stop-color="#fef7f4" stop-opacity=".33"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="Unbenannter_Verlauf_69" data-name="Unbenannter Verlauf 69" x1="145.27" y1="307.44" x2="145.27" y2="191.09" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0071bc"/>
+      <stop offset=".18" stop-color="#0a76be" stop-opacity=".97"/>
+      <stop offset=".37" stop-color="#2887c6" stop-opacity=".89"/>
+      <stop offset=".57" stop-color="#5ba3d3" stop-opacity=".75"/>
+      <stop offset=".78" stop-color="#a1cbe6" stop-opacity=".56"/>
+      <stop offset=".99" stop-color="#fcfdfe" stop-opacity=".31"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="Unbenannter_Verlauf_122" data-name="Unbenannter Verlauf 122" x1="180.74" y1="194.36" x2="244.34" y2="304.52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".3"/>
+      <stop offset=".08" stop-color="#e2f3fb" stop-opacity=".39"/>
+      <stop offset=".3" stop-color="#a0d9f2" stop-opacity=".61"/>
+      <stop offset=".5" stop-color="#6cc5eb" stop-opacity=".78"/>
+      <stop offset=".69" stop-color="#47b6e6" stop-opacity=".9"/>
+      <stop offset=".87" stop-color="#30aee3" stop-opacity=".97"/>
+      <stop offset="1" stop-color="#29abe2"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-4">
+    <g id="Ebene_1" data-name="Ebene 1">
+      <g>
+        <g>
+          <polygon class="cls-10" points="287.16 132.92 186.4 191.09 227.53 262.34 302.86 218.85 313.61 178.72 287.16 132.92"/>
+          <g class="cls-6">
+            <polygon class="cls-3" points="302.86 218.85 313.61 178.72 288.17 193.41 302.86 218.85"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-8" points="186.4 74.74 186.4 191.09 268.67 191.09 268.67 104.12 239.29 74.74 186.4 74.74"/>
+          <g class="cls-6">
+            <polygon class="cls-2" points="268.67 104.12 239.29 74.74 239.29 104.12 268.67 104.12"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-12" points="85.64 132.92 186.4 191.09 227.53 119.85 152.21 76.36 112.09 87.11 85.64 132.92"/>
+          <g class="cls-6">
+            <polygon class="cls-14" points="152.21 76.36 112.09 87.11 137.53 101.8 152.21 76.36"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-13" points="85.64 249.26 186.4 191.09 145.27 119.85 69.95 163.33 59.2 203.46 85.64 249.26"/>
+          <g class="cls-6">
+            <polygon class="cls-1" points="69.95 163.33 59.2 203.46 84.64 188.77 69.95 163.33"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-11" points="186.4 307.44 186.4 191.09 104.14 191.09 104.14 278.06 133.51 307.44 186.4 307.44"/>
+          <g class="cls-6">
+            <polygon class="cls-5" points="104.14 278.06 133.51 307.44 133.51 278.06 104.14 278.06"/>
+          </g>
+        </g>
+        <g>
+          <polygon class="cls-9" points="287.16 249.26 186.4 191.09 145.27 262.34 220.59 305.82 260.72 295.07 287.16 249.26"/>
+          <g class="cls-6">
+            <polygon class="cls-7" points="220.59 305.82 260.72 295.07 235.28 280.38 220.59 305.82"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

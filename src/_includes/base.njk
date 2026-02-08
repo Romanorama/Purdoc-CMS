@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ pageTitle if pageTitle else site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 500;
+      color: #1a1a1a;
+      background: #fff;
+      font-size: 24px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: #fff;
+      backdrop-filter: blur(10px);
+      border-bottom: none;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+
+    .nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 33px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 64px;
+      list-style: none;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.2s, transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a:hover {
+      color: #555;
+      transform: scale(1.07);
+    }
+
+    /* Signet hover icon */
+    .nav-links a::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 18px;
+      background: url('/static/Signet.svg') center/contain no-repeat;
+      opacity: 0;
+      transition: width 0.35s ease, opacity 0.35s ease;
+      animation: none;
+    }
+
+    .nav-links a:hover::before {
+      width: 18px;
+      opacity: 1;
+      animation: signet-spin 4s linear infinite;
+    }
+
+    @keyframes signet-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #eee;
+      padding: 40px 0;
+      margin-top: 0;
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .footer-inner a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    .footer-inner a:hover {
+      color: #555;
+    }
+
+    /* MOBILE BASE */
+    @media (max-width: 768px) {
+      body {
+        font-size: 18px;
+      }
+
+      .nav-inner {
+        padding: 14px 16px;
+      }
+
+      .nav-links {
+        gap: 20px;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links {
+        gap: 14px;
+      }
+    }
+
+    {{ extraStyles | safe if extraStyles }}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/static/P_Logo.png" alt="{{ site.title }}">
+      </a>
+      <ul class="nav-links">
+        {% if customNav %}
+          {{ customNav | safe }}
+        {% else %}
+          {% for link in site.navLinks %}
+            <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+  {{ content | safe }}
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; {{ site.copyright }}</span>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
+  </footer>
+
+  {{ extraScripts | safe if extraScripts }}
+
+</body>
+</html>

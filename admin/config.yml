@@ -1,0 +1,144 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static"
+public_folder: "/static"
+
+collections:
+  - name: "settings"
+    label: "Einstellungen"
+    editor:
+      preview: false
+    files:
+      - name: "site"
+        label: "Allgemeine Einstellungen"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Seitentitel", name: "title", widget: "string" }
+          - { label: "E-Mail", name: "email", widget: "string" }
+          - { label: "Adresse", name: "address", widget: "text" }
+          - { label: "Copyright", name: "copyright", widget: "string" }
+          - label: "Navigation Links"
+            name: "navLinks"
+            widget: "list"
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+
+  - name: "homepage"
+    label: "Startseite"
+    editor:
+      preview: false
+    files:
+      - name: "hero"
+        label: "Hero-Bereich"
+        file: "src/_data/hero.json"
+        fields:
+          - { label: "Überschrift (HTML erlaubt)", name: "headline", widget: "string" }
+          - { label: "Button-Text", name: "buttonText", widget: "string" }
+          - { label: "Button-Link", name: "buttonLink", widget: "string" }
+          - { label: "Bild", name: "image", widget: "image" }
+          - { label: "Bild Alt-Text", name: "imageAlt", widget: "string" }
+
+      - name: "sections"
+        label: "Content-Sections"
+        file: "src/_data/sections.json"
+        fields:
+          - label: "Das Problem"
+            name: "problem"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "image" }
+              - label: "Absätze"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Text (HTML erlaubt)", name: "text", widget: "text" }
+
+          - label: "Die Lösung"
+            name: "loesung"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "image" }
+              - label: "Absätze"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Text (HTML erlaubt)", name: "text", widget: "text" }
+
+          - label: "Highlight-Section"
+            name: "highlight"
+            widget: "object"
+            fields:
+              - { label: "Überschrift", name: "headline", widget: "string" }
+              - label: "Absätze"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Text (HTML erlaubt)", name: "text", widget: "text" }
+              - label: "Fettgedruckte Zeilen"
+                name: "boldLines"
+                widget: "list"
+                field: { label: "Zeile", name: "line", widget: "string" }
+
+      - name: "zusammenarbeit"
+        label: "Zusammenarbeit"
+        file: "src/_data/zusammenarbeit.json"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "image" }
+          - label: "Absätze"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Text (HTML erlaubt)", name: "text", widget: "text" }
+
+      - name: "process"
+        label: "Projektablauf"
+        file: "src/_data/process.json"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "image" }
+          - label: "Schritte"
+            name: "steps"
+            widget: "list"
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Beschreibung", name: "description", widget: "text" }
+
+      - name: "faq"
+        label: "FAQ"
+        file: "src/_data/faq.json"
+        fields:
+          - label: "FAQ-Einträge"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Frage", name: "question", widget: "string" }
+              - { label: "Antwort", name: "answer", widget: "text" }
+
+      - name: "cta"
+        label: "CTA-Bereich"
+        file: "src/_data/cta.json"
+        fields:
+          - { label: "Überschrift (HTML erlaubt)", name: "headline", widget: "string" }
+          - { label: "Button-Text", name: "buttonText", widget: "string" }
+          - { label: "Firmenname", name: "companyName", widget: "string" }
+          - { label: "Untertitel", name: "subtitle", widget: "string" }
+          - { label: "Adresse (HTML erlaubt)", name: "address", widget: "string" }
+          - { label: "E-Mail", name: "email", widget: "string" }
+
+  - name: "pages"
+    label: "Seiten"
+    editor:
+      preview: false
+    files:
+      - name: "beta"
+        label: "Beta-Seite"
+        file: "src/_data/beta.json"
+        fields:
+          - { label: "Überschrift", name: "headline", widget: "string" }
+          - label: "Absätze"
+            name: "paragraphs"
+            widget: "list"
+            field: { label: "Text (HTML erlaubt)", name: "text", widget: "text" }
+          - { label: "Kontakt-Text", name: "contactText", widget: "string" }
